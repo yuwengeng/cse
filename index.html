@@ -16,21 +16,21 @@
         <h1 class="title" style="padding:20px;">
         书评搜索
         </h1>
-        <i class="fas fa-search-plus"></i>
-        <p class="subtitle ">
+        
+        <p class="subtitle "><i class="fas fa-search-plus"></i>
           个人书评搜索引擎
         </p>
         <script>
-          (function() {
+          (function(id) {
             // 下方的 cx 的值替换为你的搜索引擎 ID ，可以在搜索引擎-设置-基本设置中获取。
-            var cx = CSE_ID;
+            var cx = id;
             var gcse = document.createElement('script');
             gcse.type = 'text/javascript';
             gcse.async = true;
             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(gcse, s);
-          })();
+          })(CSE_ID);
         </script>
         <!-- 搜索引擎的输入框 -->
         <gcse:searchbox></gcse:searchbox>
